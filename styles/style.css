@@ -327,11 +327,15 @@
 .footer__column_content_info {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
+  margin-bottom: 16px;
 }
 
 .footer__column_content_social {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
+  margin-bottom: 16px;
 }
 
 .logo_place_footer {
@@ -341,7 +345,7 @@
 }
 
 .footer__author {
-  margin: 0 0 18px 0;
+  margin: 18px 0 18px 0;
   line-height: 25px;
   font-size: 18px;
   color: #fff;
