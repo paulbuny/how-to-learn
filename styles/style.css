@@ -61,7 +61,7 @@
   color: #2f80ed;
   transition: color .25s ease;
 }
-.header__link:hover{
+.header__link:hover {
   color: #000;
 }
 
@@ -405,8 +405,6 @@
 
 .footer__social-icon::before {
   content: '';
-  /* position: relative;
-  bottom: -2px; */
   width: 16px;
   height: 16px;
   display: flex;
