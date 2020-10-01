@@ -382,8 +382,7 @@
 }
 
 .footer__column-link {
-  display: flex;
-  align-self: stretch;
+  display: inline-flex;
   text-decoration: none;
   line-height: 30px;
   font-size: 18px;
