@@ -1,3 +1,7 @@
+html{
+  font-size: 18px;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -7,6 +11,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
 }
 /* HEADER */
 
@@ -62,7 +67,7 @@
   transition: color .25s ease;
 }
 .header__link:hover {
-  color: #000;
+  color: #6ba5f2;
 }
 
 .header__main-illustration {
@@ -81,6 +86,7 @@
   width: 568px;
   height: 568px;
   background-color: #2f80ed;
+  animation: rotation 50s infinite linear;
 }
 
 /* END OF HEADER */
@@ -125,7 +131,7 @@
 }
 
 .two-columns__paragraph:last-child {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .two-columns__space-accent {
@@ -179,7 +185,6 @@
 .table__cell {
   margin: 60px 0 0 0;
   width: 250px;
-  margin-right: 0;
 }
 
 .table__heading {
@@ -190,8 +195,7 @@
 }
 
 .table__text {
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 0 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
@@ -243,7 +247,21 @@
 }
 
 .feynman__link:hover {
-  color: #000;
+  color: #6ba5f2;
+}
+
+.feynman__link::after {
+  transition: width .25s cubic-bezier(1, -0.04, 0, .99);
+  content: '';
+  display: flex;
+  width: 0;
+  height: 3px;
+  background-color: #2f80ed;
+}
+
+.feynman__link:hover::after {
+  display: flex;
+  width: 100%;
 }
 
 /* END OF FEYNMAN */
@@ -274,11 +292,6 @@
 }
 
 .table_theme_dark {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  width: 1100px;
   z-index: 1;
 }
 
@@ -305,6 +318,7 @@
   z-index: 0;
   background-image: url('../images/kaufman-triangle.svg');
   background-size: contain;
+  animation: rotation 100s infinite linear;
 }
 
 /* END OF KAUFMAN */
@@ -443,3 +457,118 @@
 }
 
 /* END OF FOOTER */
+
+
+/* ANIMATIONS */
+
+@keyframes rotation {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* END OF ANIMATIONS */
+
+
+/* !IMPORTANT ALTERNATIVE STYLES FOR DIFFENT VARIATIONS OF DESCRIPTIONS-TABLES-FOOTER */
+
+/* Styles for description based on Grid CSS */
+
+.description-grid {
+  max-width: 80%;
+
+  display: grid;
+  grid-template-columns: 175px 80%;
+  grid-row-gap: 30px;
+
+  justify-content: space-between;
+}
+
+.description-grid__brief {
+  grid-row: span 3;
+  margin: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+  color: #2f80ed;
+}
+
+.description-grid__paragraph {
+  margin: 0;
+
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* End of styles for description based on Grid CSS */
+
+/* Styles for tables based on Grid CSS */
+
+.table-grid {
+  list-style: none;
+
+  min-width: 1100px;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+
+  justify-content: space-between;
+
+  z-index: 1;
+}
+
+.table-grid__cell {
+  margin: 0;
+  padding: 60px 0 0 0;
+}
+
+/* End of styles for tables based on Grid CSS  */
+
+/* Styles for dark-theme-tables based on Grid CSS */
+
+.table-grid_theme_dark {
+  counter-reset: num;
+  grid-template-columns: repeat(5, 200px);
+}
+
+.table__cell-grid_theme_dark {
+  margin: 80px 0 0 0;
+}
+
+.table__cell-grid_theme_dark::before {
+  content: counter(num);
+  counter-increment: num;
+  display: block;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* End of styles for dark-theme-tables based on Grid CSS */
+
+/* Styles for footer based on Grid CSS */
+
+.footer__columns-grid {
+  width: 90%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 711px 1fr 1fr;
+}
+
+.footer__column_content_info,
+.footer__column_content_social {
+  justify-self: flex-end;
+}
+
+/* End of Styles for footer based on Grid CSS */
+
+/* END OF ADDITIONAL STYLES */
