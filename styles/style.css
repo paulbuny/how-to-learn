@@ -1,7 +1,3 @@
-html{
-  font-size: 18px;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -64,10 +60,11 @@ html{
 .header__link {
   text-decoration: none;
   color: #2f80ed;
-  transition: color .25s ease;
+  transition: opacity .25s ease-in-out;
 }
+
 .header__link:hover {
-  color: #6ba5f2;
+  opacity: .5;
 }
 
 .header__main-illustration {
@@ -86,10 +83,177 @@ html{
   width: 568px;
   height: 568px;
   background-color: #2f80ed;
-  animation: rotation 50s infinite linear;
+}
+
+.rotation {
+  animation: rotation 20s infinite linear;
 }
 
 /* END OF HEADER */
+
+/* TECHNIQUES */
+
+.techniques {
+  padding: 100px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  margin: 0;
+  padding: 0;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 100px;
+  list-style: none;
+}
+
+.cards__item {
+  margin: 60px 0 0 0;
+}
+
+.cards__image {
+  margin: 0 40px 43px 40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.cards__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cards__description {
+  margin: 16px 0 0 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+/* END OF TECHNIQUES */
+
+/* VIDEO */
+
+.video {
+  padding: 100px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video__iframes {
+  margin-top: 50px;
+}
+
+.video__iframe {
+  width: 515px;
+  height: 316px;
+  margin: 10px;
+}
+
+/* END OF VIDEO */
+
+/* OAKLEY */
+
+.oakley {
+  padding: 160px 0 0 0;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+/* END OF OAKLEY */
+
+/* KHAN */
+
+.khan{
+  padding: 105px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  width: 80%;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan__quote {
+  margin: 50px 0 36px 0;
+  max-width: 790px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.khan__quote-author {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.khan__quote-author-subline {
+  margin: 10px 0 0 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.khan__book-container {
+  margin: 68px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  background-color: red;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.khan__buy-link {
+  margin: 0 0 0 48px;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #2f80ed;
+  transition: opacity .25s ease-in-out;
+}
+
+.khan__buy-link:hover {
+  opacity: .5;
+}
+
+/* END OF KHAN */
 
 /* DESCRIPTION */
 
@@ -206,7 +370,7 @@ html{
 /* FEYNMAN */
 
 .feynman {
-  padding-top: 100px;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,25 +407,11 @@ html{
   font-size: 36px;
   color: #2f80ed;
   text-decoration: none;
-  transition: color .25s ease;
+  transition: opacity .25s ease-in-out;
 }
 
 .feynman__link:hover {
-  color: #6ba5f2;
-}
-
-.feynman__link::after {
-  transition: width .25s cubic-bezier(1, -0.04, 0, .99);
-  content: '';
-  display: flex;
-  width: 0;
-  height: 3px;
-  background-color: #2f80ed;
-}
-
-.feynman__link:hover::after {
-  display: flex;
-  width: 100%;
+  opacity: .5;
 }
 
 /* END OF FEYNMAN */
@@ -318,10 +468,37 @@ html{
   z-index: 0;
   background-image: url('../images/kaufman-triangle.svg');
   background-size: contain;
-  animation: rotation 100s infinite linear;
 }
 
 /* END OF KAUFMAN */
+
+/* RESOURCES */
+
+.resources {
+  padding: 100px 0 217px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resources__logo-zone {
+  margin: 80px 0 0 0;
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+  transition: opacity .25s ease-in-out;
+}
+
+.resources__logo:hover {
+  opacity: .5;
+}
+
+/* END OF RESOURCES */
 
 /* FOOTER */
 
@@ -402,11 +579,11 @@ html{
   font-size: 18px;
   font-weight: 400;
   color: #fff;
-  transition: color .25s ease;
+  transition: opacity .25s ease-in-out;
 }
 
 .footer__column-link:hover{
-  color: #2f80ed;
+  opacity: .5;
 }
 
 .footer__social-icon::before {
@@ -471,104 +648,3 @@ html{
 }
 
 /* END OF ANIMATIONS */
-
-
-/* !IMPORTANT ALTERNATIVE STYLES FOR DIFFENT VARIATIONS OF DESCRIPTIONS-TABLES-FOOTER */
-
-/* Styles for description based on Grid CSS */
-
-.description-grid {
-  max-width: 80%;
-
-  display: grid;
-  grid-template-columns: 175px 80%;
-  grid-row-gap: 30px;
-
-  justify-content: space-between;
-}
-
-.description-grid__brief {
-  grid-row: span 3;
-  margin: 0;
-  width: 175px;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: 400;
-  color: #2f80ed;
-}
-
-.description-grid__paragraph {
-  margin: 0;
-
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: 400;
-}
-
-/* End of styles for description based on Grid CSS */
-
-/* Styles for tables based on Grid CSS */
-
-.table-grid {
-  list-style: none;
-
-  min-width: 1100px;
-  margin: 0;
-  padding: 0;
-
-  display: grid;
-  grid-template-columns: repeat(4, 250px);
-
-  justify-content: space-between;
-
-  z-index: 1;
-}
-
-.table-grid__cell {
-  margin: 0;
-  padding: 60px 0 0 0;
-}
-
-/* End of styles for tables based on Grid CSS  */
-
-/* Styles for dark-theme-tables based on Grid CSS */
-
-.table-grid_theme_dark {
-  counter-reset: num;
-  grid-template-columns: repeat(5, 200px);
-}
-
-.table__cell-grid_theme_dark {
-  margin: 80px 0 0 0;
-}
-
-.table__cell-grid_theme_dark::before {
-  content: counter(num);
-  counter-increment: num;
-  display: block;
-
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* End of styles for dark-theme-tables based on Grid CSS */
-
-/* Styles for footer based on Grid CSS */
-
-.footer__columns-grid {
-  width: 90%;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 711px 1fr 1fr;
-}
-
-.footer__column_content_info,
-.footer__column_content_social {
-  justify-self: flex-end;
-}
-
-/* End of Styles for footer based on Grid CSS */
-
-/* END OF ADDITIONAL STYLES */
