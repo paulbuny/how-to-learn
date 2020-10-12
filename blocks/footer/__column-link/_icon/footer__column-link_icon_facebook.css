@@ -1,0 +1,11 @@
+.footer__column-link_icon_facebook::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-self: center;
+  margin-right: 10px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-image: url('../../../../images/facebook_color_white.svg');
+}
