@@ -1,7 +1,7 @@
 .cards {
   margin: 0;
   padding: 0;
-  width: 920px;
+  max-width: 920px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 100px;

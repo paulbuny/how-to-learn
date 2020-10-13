@@ -1,5 +1,5 @@
 .two-columns__main-text {
-  width: 80%;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
   min-width: 784px;

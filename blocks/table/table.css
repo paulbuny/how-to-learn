@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
-  width: 1100px;
+  max-width: 1100px;
 }
 
 .table_theme_dark {
