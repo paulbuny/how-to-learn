@@ -1,5 +1,11 @@
 @import url(../vendor/normalize.css);
 
+/*ANIMATIONS*/
+
+@import url(../blocks/rotation/rotation.css);
+
+/*END OF ANIMATIONS*/
+
 @import url(../blocks/page/page.css);
 
 /* HEADER */
@@ -23,6 +29,22 @@
 @import url(../blocks/header/__square-pic/header__square-pic.css);
 
 /* END OF HEADER */
+
+/* DESCRIPTION */
+
+@import url(../blocks/description/description.css);
+
+@import url(../blocks/two-columns/two-columns.css);
+
+@import url(../blocks/two-columns/__brief/two-columns__brief.css);
+
+@import url(../blocks/two-columns/__main-text/two-columns__main-text.css);
+
+@import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
+
+@import url(../blocks/two-columns/__space-accent/two-columns__space-accent.css);
+
+/* END OF DESCRIPTION */
 
 /* TECHNIQUES */
 
@@ -56,45 +78,18 @@
 
 /* END OF OAKLEY */
 
-/* KHAN */
+/* FEYNMAN */
 
-@import url(../blocks/khan/khan.css);
+@import url(../blocks/feynman/feynman.css);
 
-@import url(../blocks/khan/__container/khan__container.css);
+@import url(../blocks/feynman/__title/feynman__title.css);
 
-@import url(../blocks/khan/__author/khan__author.css);
+@import url(../blocks/feynman/__subtitle/feynman__subtitle.css);
 
-@import url(../blocks/khan/__title/khan__title.css);
+@import url(../blocks/feynman/__link/feynman__link.css);
 
-@import url(../blocks/khan/__quote/khan__quote.css);
+/* END OF FEYNMAN */
 
-@import url(../blocks/khan/__quote-author/khan__quote-author.css);
-
-@import url(../blocks/khan/__quote-author-subline/khan__quote-author-subline.css);
-
-@import url(../blocks/khan/__book-container/khan__book-container.css);
-
-@import url(../blocks/khan/__book-pic/khan__book-pic.css);
-
-@import url(../blocks/khan/__buy-link/khan__buy-link.css);
-
-/* END OF KHAN */
-
-/* DESCRIPTION */
-
-@import url(../blocks/description/description.css);
-
-@import url(../blocks/two-columns/two-columns.css);
-
-@import url(../blocks/two-columns/__brief/two-columns__brief.css);
-
-@import url(../blocks/two-columns/__main-text/two-columns__main-text.css);
-
-@import url(../blocks/two-columns/__paragraph/two-columns__paragraph.css);
-
-@import url(../blocks/two-columns/__space-accent/two-columns__space-accent.css);
-
-/* END OF DESCRIPTION */
 
 /* DIGITS */
 
@@ -126,17 +121,29 @@
 
 /* END OF DIGITS */
 
-/* FEYNMAN */
+/* KHAN */
 
-@import url(../blocks/feynman/feynman.css);
+@import url(../blocks/khan/khan.css);
 
-@import url(../blocks/feynman/__title/feynman__title.css);
+@import url(../blocks/khan/__container/khan__container.css);
 
-@import url(../blocks/feynman/__subtitle/feynman__subtitle.css);
+@import url(../blocks/khan/__author/khan__author.css);
 
-@import url(../blocks/feynman/__link/feynman__link.css);
+@import url(../blocks/khan/__title/khan__title.css);
 
-/* END OF FEYNMAN */
+@import url(../blocks/khan/__quote/khan__quote.css);
+
+@import url(../blocks/khan/__quote-author/khan__quote-author.css);
+
+@import url(../blocks/khan/__quote-author-subline/khan__quote-author-subline.css);
+
+@import url(../blocks/khan/__book-container/khan__book-container.css);
+
+@import url(../blocks/khan/__book-pic/khan__book-pic.css);
+
+@import url(../blocks/khan/__buy-link/khan__buy-link.css);
+
+/* END OF KHAN */
 
 /* KAUFMAN */
 
@@ -188,6 +195,5 @@
 
 /* ANIMATIONS */
 
-@import url(../blocks/rotation/rotation.css);
 
 /* END OF ANIMATIONS */
